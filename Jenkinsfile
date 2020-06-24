@@ -18,7 +18,6 @@ pipeline {
                    taskrole 'arn:aws:iam::302228741901:role/ecsTaskExecutionRole'
                    executionRole 'arn:aws:iam::302228741901:role/ecsTaskExecutionRole'
                    assignPublicIp true
-                   logDriver 'default'
                 }
             }
             steps {
