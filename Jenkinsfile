@@ -18,14 +18,13 @@ pipeline {
                    taskrole 'arn:aws:iam::302228741901:role/ecsTaskExecutionRole'
                    executionRole 'arn:aws:iam::302228741901:role/ecsTaskExecutionRole'
                    assignPublicIp true
+                   logDriver 'awslogs'
+                   logDriverOptions([[name: 'awslogs-region', value:'us-east-1'], [name: 'awslogs-group', value: '/ecs/jenkins-slave'], [name: 'awslogs-stream-prefix', value: 'jnlp']])
                 }
             }
             steps {
                 sh '''
                     echo "Hello"
-                    echo $(STAGE)
-                    echo $(STAGE)
-                    echo $(STAGE)
                    '''
 
             }
