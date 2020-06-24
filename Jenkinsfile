@@ -9,7 +9,7 @@ pipeline {
             agent {
                 ecs {
                    cloud 'jenkins-slave-ecs'
-                   image 'jenkins/jnlp-node'
+                   image 'jenkins/jnlp-slave'
                    launchType 'FARGATE'
                    memory 1024
                    cpu 256
